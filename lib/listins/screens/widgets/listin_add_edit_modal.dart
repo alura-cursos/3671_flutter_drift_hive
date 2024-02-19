@@ -1,9 +1,11 @@
 import "package:flutter/material.dart";
+import "package:flutter_listin/listins/data/database.dart";
 import "package:flutter_listin/listins/models/listin.dart";
 
 showAddEditListinModal({
   required BuildContext context,
   required Function onRefresh,
+  required AppDatabase appDatabase,
   Listin? model,
 }) {
   // Labels à serem mostradas no Modal
@@ -94,7 +96,7 @@ showAddEditListinModal({
                       );
 
                       if (model == null) {
-                        // TODO - CRUD Listin: salvar Listin
+                        appDatabase.insertListin(listin);
                       } else {
                         // TODO - CRUD Listin: editar Listin
                         listin.id = model.id;
