@@ -64,6 +64,10 @@ class AppDatabase extends _$AppDatabase {
       dateUpdate: Value(listin.dateUpdate),
     ));
   }
+
+  Future<int> deleteListin(int id) async {
+    return await (delete(listinTable)..where((row) => row.id.equals(id))).go();
+  }
 }
 
 LazyDatabase _openConnection() {
