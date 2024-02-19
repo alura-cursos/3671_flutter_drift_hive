@@ -98,8 +98,8 @@ showAddEditListinModal({
                       if (model == null) {
                         appDatabase.insertListin(listin);
                       } else {
-                        // TODO - CRUD Listin: editar Listin
                         listin.id = model.id;
+                        appDatabase.updateListin(listin);
                       }
 
                       // Atualizar a lista
