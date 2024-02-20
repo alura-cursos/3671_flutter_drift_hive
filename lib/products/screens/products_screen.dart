@@ -30,8 +30,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
 
   @override
   void initState() {
-    _productsBoxHandler.openBox(widget.listin.id);
-    // TODO - CRUD Produtos: adicionar o refresh aqui
+    _productsBoxHandler.openBox(widget.listin.id).then((value) => refresh());
     super.initState();
   }
 
@@ -216,20 +215,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
   }
 
   refresh() async {
-    List<Product> listProducts = [];
-
-    // TODO - CRUD Produtos: remover código mockado.
-    listProducts.add(
-      Product(
-        id: "P01",
-        name: "Desinfetante",
-        obs: "Não comprar de lavanda.",
-        category: "Higiene e Limpeza",
-        isKilograms: false,
-        isPurchased: false,
-      ),
-    );
-
+    List<Product> listProducts = _productsBoxHandler.getProdutcs();
     _filterProducts(listProducts);
   }
 
@@ -242,6 +228,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
       context: context,
       onRefresh: refresh,
       product: product,
+      productsBoxHandler: _productsBoxHandler,
     );
   }
 

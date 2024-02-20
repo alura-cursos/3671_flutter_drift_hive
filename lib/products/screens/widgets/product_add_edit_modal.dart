@@ -1,10 +1,12 @@
 import "package:flutter/material.dart";
+import 'package:flutter_listin/products/data/products_box_handler.dart';
 import 'package:uuid/uuid.dart';
 import '../../model/product.dart';
 
 showProductAddEditProductModal({
   required BuildContext context,
   required Function onRefresh,
+  required ProductsBoxHandler productsBoxHandler,
   Product? product,
 }) {
   // Labels à serem mostradas no Modal
@@ -253,7 +255,7 @@ showProductAddEditProductModal({
 
                           // Salvar
                           if (product == null) {
-                            // TODO - CRUD Produtos: Salvar Produto
+                            productsBoxHandler.insertProduct(produto);
                           } else {
                             // TODO - CRUD Produtos: Editar Produto
                           }
