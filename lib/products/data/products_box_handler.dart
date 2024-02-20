@@ -23,4 +23,8 @@ class ProductsBoxHandler {
   Future<void> updateProduct(Product product) async {
     return product.save();
   }
+
+  Future<void> removeProduct(Product product) async {
+    return _box.delete(product.key);
+  }
 }

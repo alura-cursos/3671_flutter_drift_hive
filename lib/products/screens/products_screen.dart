@@ -220,7 +220,8 @@ class _ProductsScreenState extends State<ProductsScreen> {
   }
 
   _removeProduct(Product produto) async {
-    // TODO - CRUD Produtos: remover produto
+    _productsBoxHandler.removeProduct(produto);
+    refresh();
   }
 
   showAddEditModal({Product? product}) {
