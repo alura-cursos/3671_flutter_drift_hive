@@ -1,16 +1,41 @@
-# flutter_listin
+![Mobile-Flutter: Conhecendo a biblioteca Animations](capa.png)
 
-Projeto do Listin para curso de Storage da Alura
+# Flutter: Persistência de dados com Drift e Hive
 
-## Getting Started
+O projeto Listin é um gerenciador de listas de compras para que você possa planejar sua feira e, no supermercado, possa anotar quanto já gastou para evitar surpresas na hora do caixa!
 
-This project is a starting point for a Flutter application.
+### Tópicos abordados no curso:
 
-A few resources to get you started if this is your first Flutter project:
+- O que é persistência de dados;
+- Banco de dados relacional e não relacional;
+- Como instalar e configurar o Drift;
+- Operações básicas usando o Drift;
+- Como instalar e configurar o Hive;
+- Operações básicas usando o Hive;
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Este curso é indicado para pessoas que já tem um bom conhecimento de Dart e Flutter e desejem tornar suas aplicações funcionais com o armazenamento local de informações usando duas das ferramentas mais confiáveis do mercado;
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📑 Requisitos
+
+- Conhecimentos básicos de Flutter e Dart;
+- VS Code com plugins do Flutter e Dart instalados (recomendado para acompanhar este curso);
+- É importante ter o Flutter na versão 3.16.9.
+
+## ✨ Funcionalidades do projeto
+
+- Configuração do Drift no Flutter;
+- Implementação da adição, leitura, edição e remoção de "Listins" usando o Drift;
+- Configuração do Hive no Flutter;
+- Implementação da adição, leitura, edição e remoção dos produtos usando o Hive;
+
+![GIF da aplicação em execução](projeto.gif)
+
+
+## 🛠️ Abrir e rodar o projeto
+
+Aqui vem um passo a passo para abrir e rodar o projeto.
+
+- **Open an Existing Project** (ou alguma opção similar)
+- Procure o local onde o projeto está e o selecione (Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo)
+- Por fim clique em OK
+- Depois basta rodar o comando `flutter run` na pasta do projeto
